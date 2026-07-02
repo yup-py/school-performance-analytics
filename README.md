@@ -9,7 +9,7 @@ The solution transitions complex academic datasets into a clean, modern, and hig
 🛠️ Tech Stack & Key Features
 Bi Tool: Power BI Desktop
 
-Data Modeling: Star schema optimization with cross-filter calibration.
+Data Modeling: Snowflake schema optimization with cross-filter calibration.
 
 Calculations: Advanced DAX measures for localized KPI metrics (e.g., customized Semester-specific success rates via CALCULATE).
 
