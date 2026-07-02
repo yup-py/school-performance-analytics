@@ -1,4 +1,6 @@
 Academic Performance & Institutional Management Dashboard
+
+
 📋 Project Overview
 This production-grade, multi-page Power BI dashboard suite provides educational administrators and directors with actionable, data-driven insights into student performance, faculty workloads, and granular course-level success metrics.
 
