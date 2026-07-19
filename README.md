@@ -1,65 +1,158 @@
-Academic Performance & Institutional Management Dashboard
+# 1. Project Name
 
+**Project name:** school-performance-analytics
 
-📋 Project Overview
-This production-grade, multi-page Power BI dashboard suite provides educational administrators and directors with actionable, data-driven insights into student performance, faculty workloads, and granular course-level success metrics.
+---
 
-The solution transitions complex academic datasets into a clean, modern, and highly interactive user experience designed to drive strategic interventions (such as identifying at-risk students and balancing teacher allocations).
+# 2. Project Overview
 
-🛠️ Tech Stack & Key Features
-Bi Tool: Power BI Desktop
+This project is a data analysis dashboard that visualizes academic performance indicators.
 
-Data Modeling: Snowflake schema optimization with cross-filter calibration.
+It is aimed primarily at school principals and teaching staff.
 
-Calculations: Advanced DAX measures for localized KPI metrics (e.g., customized Semester-specific success rates via CALCULATE).
+Its main goal is to help identify students who are struggling and optimize the management of teaching staff.
 
-UX/UI Design: Modern sidebar navigation panel, custom unified KPI cards, synchronized page-specific filtering, and custom-rounded container layouts for clean visual hierarchy.
+---
 
-📊 Dashboard Architecture
-1. Vue Élèves (Student Insights)
-This view focuses on student demographics, baseline performance indicators, and behavioral correlations.
+# 3. Problem Statement
 
-High-Level KPIs: Total Students, General Average, Success Rate, and At-Risk Student counts.
+The problem identified is that schools lack a simple tool to cross-reference performance data, absenteeism, and teacher workload.
 
-Demographic Breakdowns: Student distribution filtered by academic sections and longitudinal enrollment tracking over multiple years.
+The proposed solution centralizes this data into an interactive dashboard to facilitate decision-making.
 
-Predictive Analytics: An interactive scatter plot correlating Grades vs. Absences featuring an automated baseline average marker to visually isolate high-risk profiles immediately.
+---
 
-2. Vue Enseignants (Faculty & HR Analytics)
-A dedicated management layer allowing school directors to audit teaching staff performance and operational metrics.
+# 4. Key Features
 
-Core Metrics: Total Faculty, Average Seniority, Average Weekly Hours, and Average Evaluation Scores.
+- Analyze overall student performance (pass rates, averages) by section.
+- Graphically identify at-risk profiles by cross-referencing grades and absences.
+- Audit teacher workload and weekly hours.
+- Compare the evolution of averages year-over-year and by semester.
+- Dynamically filter all school data by school year.
 
-Workload Distribution: A stacked column chart cross-referencing subject domains with employment contract statuses (Contractual, Tenured, Substitute).
+---
 
-Performance Auditing: Side-by-side comparative leaderboard tables showcasing the Top 5 and Flop 5 teachers based on standardized performance ratings.
+# 5. Technologies Used
 
-3. Performance & Analyses Approfondies (Academic Deep-Dive)
-A granular performance evaluation space designed to analyze trends across different periods and subject matters.
+| Technology | Use in the project |
+|-------------|----------------------------|
+| Power BI Desktop | Data model creation and visual reports |
+| DAX (Data Analysis Expressions) | Writing calculated measures and KPIs |
+| Snowflake schema modeling | Organizing and structuring relational tables |
 
-Unified KPI Card: Integrates total courses, average realization rates, and standalone S1 vs. S2 Success Rates inside a single custom-designed banner.
+---
 
-Trend Tracking: A continuous line chart mapping the evolution of grade averages across multiple semesters and school years.
+# 6. Installation and Setup
 
-Granular Course Audit: An expansive stacked horizontal bar chart visualizing the volume of Passing, Failing, and Unknown outcomes across all individual course subjects.
+## 6.1 Prerequisites
 
-🎛️ Interactivity & Navigation Architecture
-Contextual Page-Specific Slicers: Replaced cluttered global filters with clean, space-saving dropdowns and dynamic horizontal "tiles" tailored exclusively to the page context.
+To use this project, you need:
 
-Bidirectional Cross-Filtering: Configured explicit cross-filtering settings across relational tables to ensure charts dynamically react when filtering by dimensions like Année Scolaire.
+- Power BI Desktop (free on Windows)
+- Git (to clone the project)
 
-Native Navigation Controls: Implemented sleek directional arrows at the bottom of the sidebar layouts for fluid, app-like storytelling navigation.
+---
 
-📈 Key Insights Addressed
-At-Risk Student Identification: Pinpoints the exact threshold where absence volumes negatively impact student passing rates.
+## 6.2 Clone the repository
 
-Curriculum Pain Points: Highlights technical subjects displaying disproportionately high failure rates to recommend targeted tutoring resources.
+```bash
+git clone https://github.com/yup-py/school-performance-analytics
+```
 
-Faculty Optimization: Identifies overloaded or underutilized teaching staff to aid resource reallocation strategies.
+---
 
-🚀 How to View the Project
-Clone this repository.
+## 6.3 Open the folder
 
-Open the .pbix file using Power BI Desktop.
+```bash
+cd school-performance-analytics
+```
 
-Use Ctrl + Click on the sidebar navigation buttons to move between reporting views.
+---
+
+## 6.4 Run the project
+
+Simply open the following file with Power BI Desktop:
+
+```text
+Double-click the project file (.pbix extension)
+```
+
+---
+
+# 7. Screenshots
+
+## Screenshot 1
+
+### Title
+
+```
+Students View - Performance and Absenteeism
+```
+
+### Image
+
+```md
+![Students View](dashboard/screenshots/vue_eleves.png)
+```
+
+### Explanation
+
+This screenshot shows the student demographic breakdown and the chart linking grades to absences.
+
+---
+
+## Screenshot 2
+
+### Title
+
+```
+Teachers View - Workload and HR
+```
+
+### Image
+
+```md
+![Teachers View](dashboard/screenshots/vue_enseignants.png)
+```
+
+### Explanation
+
+This screenshot shows the analysis of teacher hours and performance rankings.
+
+---
+
+# 8. Personal Contribution
+
+My main contribution was the complete creation of the relational data model and the dashboard visuals.
+
+I also worked on writing complex calculation formulas in DAX.
+
+I was responsible for the UX, menu navigation, and setting up the interactive filters.
+
+---
+
+# 9. Challenges Encountered
+
+## Challenge 1
+
+I encountered the following issue: the dynamic calculation of the semester pass rate was getting mixed up with the global year filters.
+
+To understand the root cause, I studied how Power BI's filter context behaves.
+
+I solved the problem by using the `CALCULATE` function in DAX to correctly isolate the semesters.
+
+This challenge taught me to master filter context modification in DAX.
+
+---
+
+# 10. Possible Improvements
+
+In a future version, I could:
+
+* Optimize the data model's loading times.
+* Add more precise time filters by quarter.
+* Automate the refresh of source data.
+
+### Conclusion
+
+These improvements would make the dashboard faster and even more detailed for users.
